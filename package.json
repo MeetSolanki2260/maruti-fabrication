@@ -1,0 +1,43 @@
+{
+  "name": "maruti-fabrication",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "drizzle-orm": "0.45.4",
+    "hono": "4.13.13",
+    "next": "16.4.3",
+    "next-intl": "4.14.9",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-plugin": "1.4.7",
+    "@cloudflare/workers-types": "5.20261024.1",
+    "@types/node": "22.19.1",
+    "@types/react": "19.3.0",
+    "drizzle-kit": "0.31.11",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.3",
+    "sharp": "0.35.5",
+    "typescript": "5.9.3",
+    "vitest": "4.1.12",
+    "wrangler": "4.152.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "dev:worker": "wrangler dev",
+    "build": "node scripts/check-env.mjs && node scripts/optimize-images.mjs && node scripts/check-i18n.mjs && next build",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.worker.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:e2e": "echo Phase 2",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "wrangler d1 migrations apply maruti-prod --local",
+    "db:migrate:remote": "wrangler d1 migrations apply maruti-prod --remote",
+    "deploy": "npm run build && wrangler deploy",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run build",
+    "predev": "node scripts/check-env.mjs && node scripts/optimize-images.mjs"
+  }
+}

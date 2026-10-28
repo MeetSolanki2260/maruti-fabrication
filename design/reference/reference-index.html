@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maruti Febrication</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: split dark hero over light editorial sections, 12-col feel, mono eyebrows, condensed display type */
+:root{
+  --ink:#1f2522;        /* deep green-black */
+  --paper:#f3f2ed;      /* light section */
+  --stone:#e9e8e1;      /* alt light section */
+  --orange:#ee6a33;     /* accent */
+  --peach:#fff0e5;
+  --muted:#6b706c;
+  --muted-dark:#aeb3ae;
+  --line:#d4d3cb;
+  --line-dark:#3a413d;
+  --display:'Barlow Condensed','Arial Narrow',sans-serif;
+  --body:'Inter',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.wrap{width:100%;max-width:1640px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media(min-width:900px){.wrap{padding-left:max(80px,env(safe-area-inset-left,0px));padding-right:max(80px,env(safe-area-inset-right,0px))}}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.07em;text-transform:uppercase}
+.eyebrow{color:var(--muted)}
+.dark .eyebrow{color:var(--muted-dark)}
+section{padding-block:clamp(56px,8vw,112px)}
+.dark{background:var(--ink);color:var(--paper)}
+.alt{background:var(--stone)}
+
+/* top strip + nav */
+.strip{background:var(--ink);color:var(--muted-dark);padding-block:12px;border-bottom:1px solid var(--line-dark)}
+.strip .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.strip b{font-weight:400;color:var(--paper)}
+.nav{background:var(--paper);position:sticky;top:env(safe-area-inset-top,0px);z-index:5;border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:80px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:700;font-size:30px;text-transform:uppercase;letter-spacing:.005em}
+.logo svg{width:46px;height:46px;flex:none}
+.links{display:flex;align-items:center;gap:36px;font-size:15px}
+.links a:not(.btn):hover{color:var(--orange)}
+@media(max-width:860px){.links a:not(.btn){display:none}.logo{font-size:24px}.logo svg{width:38px;height:38px}}
+@media(max-width:480px){.nav .btn{padding:12px 14px}.strip .right{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;padding:18px 28px;font-weight:600;font-size:15px;background:var(--orange);color:var(--ink);border:1px solid var(--orange);cursor:pointer;font-family:var(--body);transition:background .2s,color .2s,transform .2s}
+.btn:hover{background:var(--ink);color:var(--orange)}
+.dark .btn:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn svg{width:14px;height:14px}
+.btn.ghost{background:transparent;color:var(--paper);border-color:var(--line-dark)}
+.btn.ghost:hover{border-color:var(--paper);background:transparent;color:var(--paper)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;background:var(--ink);color:var(--paper)}
+.hero-copy{padding:clamp(48px,8vw,140px) max(16px,env(safe-area-inset-left,0px)) clamp(40px,5vw,72px);display:flex;flex-direction:column;justify-content:center;gap:34px}
+.hero-copy>*{max-width:640px}
+@media(min-width:900px){.hero-copy{padding-left:max(80px,env(safe-area-inset-left,0px));padding-right:48px}}
+.tag{display:flex;align-items:center;gap:12px;color:var(--paper)}
+.tag:before{content:"";width:9px;height:9px;background:var(--orange)}
+.hero h1{font-size:clamp(64px,9vw,128px);font-weight:600;line-height:.92}
+.hero p.lede{font-size:clamp(17px,1.6vw,20px);color:#cfd3ce;max-width:520px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.hero-img{position:relative;min-height:420px}
+.hero-img img{position:absolute;inset:0}
+.hero-cap{position:absolute;left:30px;right:28px;bottom:30px;background:var(--ink);color:var(--paper);padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.hero-cap p{font-size:17px;line-height:1.3;margin-bottom:6px}
+.hero-cap .mono{font-size:11px;color:var(--muted-dark)}
+.hero-cap svg{width:16px;height:16px;color:var(--orange);flex:none}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-img{min-height:360px;aspect-ratio:4/3}.hero-cap{left:16px;right:16px;bottom:16px;padding:16px}}
+.ticker{background:var(--paper);padding-block:28px;border-bottom:1px solid var(--line)}
+.ticker .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center;justify-content:space-between}
+.ticker ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 6vw;flex:1;justify-content:space-around}
+.ticker li{display:flex;gap:10px;align-items:center;font-size:19px}
+.ticker li:before{content:"";width:6px;height:6px;background:var(--orange)}
+
+/* section heads */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px 64px;flex-wrap:wrap;margin-bottom:clamp(36px,5vw,64px)}
+.head>div{min-width:0}
+.head h2{font-size:clamp(44px,5.6vw,80px);margin-top:28px;line-height:.98}
+.head p.side{max-width:440px;color:var(--muted);font-size:18px}
+.dark .head p.side{color:var(--muted-dark)}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(5,1fr);gap:30px}
+@media(max-width:1100px){.svc{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.svc{grid-template-columns:1fr}}
+.card{border-top:2px solid var(--line);border-bottom:2px solid var(--line);padding:30px 0 26px;display:flex;flex-direction:column;gap:22px;min-width:0;transition:border-color .2s}
+.card:hover{border-color:var(--ink)}
+.card .top{display:flex;justify-content:space-between;align-items:flex-start;color:var(--muted)}
+.card .top svg{width:40px;height:40px;color:var(--ink)}
+.card h3{font-size:38px;margin-top:10px}
+.card p{color:var(--muted);font-size:17px;line-height:1.7;flex:1}
+.card .foot{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:500;gap:10px}
+.card .foot svg{width:14px;height:14px;color:var(--orange);flex:none}
+.under{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:44px;align-items:center}
+.under a{display:inline-flex;gap:8px;align-items:center}
+.under a:hover{color:var(--orange)}
+.under svg{width:12px;height:12px}
+
+/* fits */
+.fits{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+@media(max-width:800px){.fits{grid-template-columns:1fr}}
+.fit{background:var(--paper);min-width:0}
+.fit.biz{background:var(--peach)}
+.fit .ph{aspect-ratio:805/372;overflow:hidden}
+.fit .ph img{transition:transform .8s ease}
+.fit:hover .ph img{transform:scale(1.03)}
+.fit .body{padding:34px 34px 36px;display:flex;flex-direction:column;gap:14px}
+.fit .t{display:flex;justify-content:space-between;align-items:center}
+.fit h3{font-size:44px}
+.fit.biz h3{color:var(--orange)}
+.fit .t svg{width:28px;height:28px;color:var(--orange)}
+.fit p{color:var(--muted);font-size:18px}
+.fit .mono{font-size:11px;color:var(--muted);margin-top:6px}
+.note{margin-top:44px;color:var(--muted);font-size:11px}
+
+/* inspiration */
+.filters{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}
+.filters button{font:500 14px var(--body);background:transparent;color:var(--paper);border:1px solid var(--line-dark);padding:12px 20px;cursor:pointer;transition:.2s}
+.filters button:hover{border-color:var(--paper)}
+.filters button[aria-pressed="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.insp{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:30px;align-items:start}
+@media(max-width:900px){.insp{grid-template-columns:1fr}}
+.pc{min-width:0}
+.pc[hidden]{display:none!important}
+.pc .ph{aspect-ratio:1.5/1;overflow:hidden}
+.pc:not(:first-child) .ph{aspect-ratio:.95/1}
+@media(max-width:900px){.pc .ph,.pc:not(:first-child) .ph{aspect-ratio:4/3}}
+.pc .ph img{transition:transform .8s ease}
+.pc:hover .ph img{transform:scale(1.03)}
+.pc .row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:26px}
+.pc h3{font-size:38px}
+.pc:hover h3,.pc.first h3{color:var(--orange)}
+.pc .row svg{width:14px;height:14px;color:var(--orange);flex:none}
+.pc p{color:var(--muted-dark);margin-top:18px;font-size:16px}
+.pc .mono{font-size:11px;color:var(--muted-dark);margin-top:14px;display:block}
+
+/* custom */
+.custom{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
+@media(max-width:900px){.custom{grid-template-columns:1fr}}
+.custom .ph{aspect-ratio:720/644;overflow:hidden}
+.custom .cap{margin-top:20px;color:var(--muted);font-size:11px}
+.custom h2{font-size:clamp(46px,5.6vw,80px);margin:30px 0 28px}
+.custom .intro{color:var(--muted);font-size:19px;max-width:640px}
+.spec{margin:40px 0}
+.spec div{display:grid;grid-template-columns:200px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--line)}
+@media(max-width:560px){.spec div{grid-template-columns:1fr;gap:4px}}
+.spec dt{font-weight:600;font-size:16px}
+.spec dd{margin:0;color:var(--muted)}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+@media(max-width:1000px){.why{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.why{grid-template-columns:1fr}}
+.why>div{border-top:1px solid var(--line);padding-top:28px;min-width:0}
+.why svg{width:30px;height:30px;color:var(--orange);margin-bottom:40px}
+.why h3{font-size:36px;margin-bottom:22px}
+.why p{color:var(--muted);font-size:17px}
+.why-sec h2.solo{font-size:clamp(44px,5.6vw,80px);margin:28px 0 60px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+@media(max-width:1000px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step{border-top:1px solid var(--ink);padding-top:26px;min-width:0}
+.step .n{display:flex;justify-content:space-between;color:var(--orange);margin-bottom:36px}
+.step .n svg{width:18px;height:18px;color:var(--muted)}
+.step h3{font-size:38px;margin-bottom:22px}
+.step p{color:var(--muted);font-size:17px}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px)}
+@media(max-width:900px){.faq-grid{grid-template-columns:1fr}}
+.faq-grid h2{font-size:clamp(46px,5.6vw,80px);margin:28px 0 28px}
+.faq-grid .intro{color:var(--muted);font-size:18px;max-width:440px}
+.phone{display:flex;gap:14px;align-items:center;margin-top:40px;font-size:26px;font-weight:500}
+.phone svg{width:26px;height:26px;color:var(--orange)}
+.acc{border-top:1px solid var(--line)}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:26px 0;font-size:19px;font-weight:500}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary:hover{color:var(--orange)}
+.acc .pm{position:relative;width:16px;height:16px;flex:none}
+.acc .pm:before,.acc .pm:after{content:"";position:absolute;background:currentColor;left:0;right:0;top:7px;height:1.5px;transition:transform .25s}
+.acc .pm:after{transform:rotate(90deg)}
+.acc details[open] .pm:after{transform:rotate(0)}
+.acc .ans{padding:0 40px 28px 0;color:var(--muted);font-size:17px;max-width:720px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,100px);align-items:start}
+@media(max-width:900px){.contact{grid-template-columns:1fr}}
+.contact h2{font-size:clamp(56px,7vw,100px);line-height:.95;margin:30px 0 36px}
+.contact .lede{color:#cfd3ce;font-size:20px;max-width:560px}
+.contact .call{margin-top:48px;color:var(--muted-dark);font-size:12px}
+.bignum{display:block;font-family:var(--display);font-weight:600;color:var(--orange);font-size:clamp(64px,8vw,108px);line-height:1;margin:14px 0 26px;letter-spacing:.005em}
+.loc{display:flex;gap:14px;align-items:center;font-size:18px}
+.loc svg{width:22px;height:22px;color:var(--orange)}
+.ready{color:var(--muted-dark);margin-top:30px;max-width:620px}
+.form{border:1px solid var(--line-dark);padding:clamp(24px,3.5vw,40px);min-width:0}
+.form h3{font-size:44px}
+.form .sub{color:var(--muted-dark);font-size:15px;margin:10px 0 34px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:12px;margin-bottom:24px;min-width:0}
+.field label{font-size:15px;font-weight:500}
+.field input,.field select,.field textarea{font:400 16px var(--body);background:transparent;color:var(--paper);border:1px solid var(--line-dark);padding:19px 18px;width:100%;border-radius:0}
+.field textarea{min-height:116px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted-dark)}
+.field select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' fill='none' stroke='%23f3f2ed' stroke-width='1.6'%3E%3Cpath d='M1 1l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 20px center;color:var(--muted-dark)}
+.field select.picked{color:var(--paper)}
+.field select option{color:#1f2522;background:#f3f2ed}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange)}
+.form .foot{color:var(--muted-dark);font-size:14px;margin-top:26px}
+.msg{margin-top:20px;font-size:15px;color:var(--orange);min-height:1.5em}
+
+/* footer */
+footer{background:var(--paper);padding-top:72px}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+.fgrid>div{min-width:0}
+.fbrand{font-family:var(--display);font-weight:700;font-size:44px;text-transform:uppercase;line-height:1}
+.fgrid .about{color:var(--muted);margin-top:26px;max-width:480px}
+.fgrid h4{margin:0 0 26px;font-weight:400;color:var(--muted);font-size:11px}
+.fgrid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.fgrid ul a:hover,.fgrid .rq:hover{color:var(--orange)}
+.fnum{font-family:var(--display);font-weight:600;font-size:42px;line-height:1;margin:-6px 0 18px}
+.fgrid .city{color:var(--muted)}
+.rq{display:inline-flex;gap:14px;align-items:center;font-weight:600;margin-top:14px}
+.rq svg{width:13px;height:13px;color:var(--orange)}
+.fbar{border-top:1px solid var(--line);margin-top:56px;padding-block:28px;display:flex;justify-content:space-between;gap:16px 32px;flex-wrap:wrap;align-items:center;color:var(--muted)}
+.fbar .mono{font-size:11px}
+.fbar .mid{font-size:14px}
+.fbar a{display:inline-flex;gap:8px;align-items:center;color:var(--ink);font-size:15px}
+.fbar a:hover{color:var(--orange)}
+.fbar svg{width:12px;height:12px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11L11 3M4.5 3H11v6.5"/></symbol>
+  <symbol id="arrow-dr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3l8 8M11 4.5V11H4.5"/></symbol>
+  <symbol id="arrow-r" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10h13M11 5l5 5-5 5"/></symbol>
+  <symbol id="arrow-u" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 12V2M3 6l4-4 4 4"/></symbol>
+  <symbol id="check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10.5l4.5 4.5L17 5.5"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2z"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></symbol>
+  <symbol id="shop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 9l1.5-5h13L20 9a3 3 0 01-6 0 3 3 0 01-4 0 3 3 0 01-6 0zM5 12v8h14v-8M10 20v-4h4v4"/></symbol>
+  <symbol id="i-gate" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 8l3-3 3 3v26H3zM11 8l3-3 3 3v26h-6zM23 8l3-3 3 3v26h-6zM31 8l3-3 3 3v26h-6z"/><path d="M3 18h34M3 27h34"/></symbol>
+  <symbol id="i-grill" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="32" height="32" rx="3"/><path d="M4 15h32M4 25h32M15 4v32M25 4v32"/></symbol>
+  <symbol id="i-shed" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 36V15L20 4l15 11v21z"/><rect x="11" y="16" width="18" height="14" rx="1.5"/><path d="M11 21h18M11 25h18"/></symbol>
+  <symbol id="i-dome" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 12h32M6 8l14-5 14 5M6 36h28M8 12v18M15 12v18M22 12v18M29 12v18M5 30h30"/></symbol>
+  <symbol id="i-int" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="32" height="32" rx="3"/><path d="M4 16h32M18 16v20"/></symbol>
+</svg>
+
+<div class="strip mono"><div class="wrap"><span>Custom metalwork · Jamnagar, India</span><span class="right">Let’s talk about your project &nbsp;/&nbsp; <b>9428280683</b></span></div></div>
+
+<header class="nav" id="top"><div class="wrap">
+  <a class="logo" href="#top" aria-label="Maruti Febrication home">
+    <svg viewBox="0 0 46 46" fill="none" stroke="#ee6a33" stroke-width="2.4" stroke-linejoin="miter"><path d="M2 44V2h6l15 23L38 2h6v42h-6V15L23 38 8 15v29z"/></svg>
+    Maruti Febrication
+  </a>
+  <nav class="links">
+    <a href="#services">Services</a><a href="#inspiration">Design inspiration</a><a href="#process">Our process</a>
+    <a class="btn" href="#contact">Request a quote <svg><use href="#arrow"/></svg></a>
+  </nav>
+</div></header>
+
+<main>
+<div class="hero">
+  <div class="hero-copy">
+    <div class="tag mono">Metal. Steel. Stainless steel.</div>
+    <h1>Your space.<br>Built in metal.</h1>
+    <p class="lede">Custom gates, grills, sheds, domes and interior metalwork for homes and businesses in Jamnagar. Your idea, shaped to fit.</p>
+    <div class="cta-row">
+      <a class="btn" href="#contact">Request a quote <svg><use href="#arrow"/></svg></a>
+      <a class="btn ghost" href="tel:9428280683">Call 9428280683 <svg style="width:22px;height:22px"><use href="#phone"/></svg></a>
+    </div>
+    <p class="mono eyebrow" style="color:var(--muted-dark);font-size:11px">Residential + commercial &nbsp;/&nbsp; Local service</p>
+  </div>
+  <div class="hero-img">
+    <img src="img/hero.jpg" alt="Slatted steel entrance gate set in a sandstone wall with garden planting">
+    <a class="hero-cap" href="#inspiration"><div><p>A considered entrance. A lasting impression.</p><span class="mono">Design inspiration · Not completed work</span></div><svg><use href="#arrow-dr"/></svg></a>
+  </div>
+</div>
+
+<div class="ticker"><div class="wrap">
+  <span class="mono eyebrow">Fabrication, your way</span>
+  <ul><li>Gates &amp; grills</li><li>Shades &amp; sheds</li><li>Domes</li><li>Custom interiors</li></ul>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="head">
+    <div><span class="mono eyebrow">01 / What we make</span><h2>Practical metalwork.<br>Personal to your space.</h2></div>
+    <p class="side">From the first point of entry to the smallest interior detail, explore fabrication made around your needs.</p>
+  </div>
+  <div class="svc">
+    <a class="card" href="#contact"><div class="top"><svg><use href="#i-gate"/></svg><span class="mono">01</span></div><h3>Gates</h3><p>An entrance that balances privacy, access and the character of your property.</p><div class="foot">Entrance &amp; driveway gates <svg><use href="#arrow"/></svg></div></a>
+    <a class="card" href="#contact"><div class="top"><svg><use href="#i-grill"/></svg><span class="mono">02</span></div><h3>Grills</h3><p>Practical protection with patterns that complement your windows and balconies.</p><div class="foot">Windows &amp; balconies <svg><use href="#arrow"/></svg></div></a>
+    <a class="card" href="#contact"><div class="top"><svg><use href="#i-shed"/></svg><span class="mono">03</span></div><h3>Shades &amp; sheds</h3><p>Made-to-fit coverage for parking, terraces and everyday working areas.</p><div class="foot">Parking &amp; outdoor spaces <svg><use href="#arrow"/></svg></div></a>
+    <a class="card" href="#contact"><div class="top"><svg><use href="#i-dome"/></svg><span class="mono">04</span></div><h3>Domes</h3><p>Distinctive metal structures shaped around your space and design requirements.</p><div class="foot">Architectural structures <svg><use href="#arrow"/></svg></div></a>
+    <a class="card" href="#contact"><div class="top"><svg><use href="#i-int"/></svg><span class="mono">05</span></div><h3>Custom interiors</h3><p>Purpose-made metal pieces that bring structure and detail to your interiors.</p><div class="foot">Partitions, frames &amp; more <svg><use href="#arrow"/></svg></div></a>
+  </div>
+  <div class="under"><span class="mono eyebrow">Material options / Metal · Steel · Stainless steel</span><a href="#contact">Not sure what you need? Start with a conversation. <svg><use href="#arrow"/></svg></a></div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="head">
+    <div><span class="mono eyebrow">02 / Where it fits</span><h2>For the places you live. And work.</h2></div>
+    <p class="side">Local fabrication for residential and commercial spaces across Jamnagar.</p>
+  </div>
+  <div class="fits">
+    <article class="fit"><div class="ph"><img src="img/home.jpg" alt="Terrace with a black window grill, metal mesh shade and a cane chair" loading="lazy"></div>
+      <div class="body"><div class="t"><h3>At home</h3><svg><use href="#home"/></svg></div><p>Make your home feel complete, from a secure entrance to a sheltered terrace and thoughtful interior details.</p><span class="mono">Gates / Window grills / Terrace shades / Interiors</span></div></article>
+    <article class="fit biz"><div class="ph"><img src="img/business.jpg" alt="Shopfront with a steel-framed glass door and an ornate metal canopy" loading="lazy"></div>
+      <div class="body"><div class="t"><h3>For your business</h3><svg><use href="#shop"/></svg></div><p>Plan useful metalwork around the way your shop, office or commercial space needs to function.</p><span class="mono">Entry gates / Workspace sheds / Partitions / Frames</span></div></article>
+  </div>
+  <p class="note mono">Illustrative design inspiration throughout — not a portfolio of completed projects.</p>
+</div></section>
+
+<section class="dark" id="inspiration"><div class="wrap">
+  <div class="head">
+    <div><span class="mono eyebrow">03 / Explore the possibilities</span><h2>A little inspiration.<br>A starting point for your own.</h2></div>
+    <p class="side">Explore representative styles, not completed projects. Bring a reference you like and let’s discuss what fits your space.</p>
+  </div>
+  <div class="filters" role="group" aria-label="Filter inspiration">
+    <button type="button" data-f="all" aria-pressed="true">All inspiration</button>
+    <button type="button" data-f="gates" aria-pressed="false">Gates &amp; grills</button>
+    <button type="button" data-f="shades" aria-pressed="false">Shades &amp; domes</button>
+    <button type="button" data-f="interior" aria-pressed="false">Interior metalwork</button>
+  </div>
+  <div class="insp" id="insp">
+    <article class="pc first" data-c="gates"><div class="ph"><img src="img/gate.jpg" alt="Steel gate with vertical slats in a stone wall" loading="lazy"></div><div class="row"><h3>Clean lines. A confident entrance.</h3><svg><use href="#arrow"/></svg></div><p>Steel gate / Vertical slat concept</p><span class="mono">Design inspiration / Illustrative</span></article>
+    <article class="pc" data-c="shades"><div class="ph"><img src="img/dome.jpg" alt="Metal dome canopy over a balcony" loading="lazy"></div><div class="row"><h3>Shelter with structure.</h3><svg><use href="#arrow"/></svg></div><p>Metal dome / Terrace canopy concept</p><span class="mono">Design inspiration / Illustrative</span></article>
+    <article class="pc" data-c="interior"><div class="ph"><img src="img/interior.jpg" alt="Black metal partition in a living and dining room" loading="lazy"></div><div class="row"><h3>Details that define a room.</h3><svg><use href="#arrow"/></svg></div><p>Interior metalwork / Partition concept</p><span class="mono">Design inspiration / Illustrative</span></article>
+  </div>
+</div></section>
+
+<section><div class="wrap custom">
+  <figure style="margin:0;min-width:0"><div class="ph"><img src="img/craft.jpg" alt="Hands aligning a square steel frame on a workshop bench" loading="lazy"></div><figcaption class="cap mono">Craft detail / Illustrative image</figcaption></figure>
+  <div style="min-width:0">
+    <span class="mono eyebrow">04 / Custom is the starting point</span>
+    <h2>Not off the shelf.<br>Made around you.</h2>
+    <p class="intro">An unusual opening, a specific pattern or a detail you can’t find ready-made? Let’s talk through the dimensions, purpose and look before shaping a solution.</p>
+    <dl class="spec">
+      <div><dt>Fit &amp; function</dt><dd>Your opening, layout and everyday use.</dd></div>
+      <div><dt>Material &amp; finish</dt><dd>Discuss metal, steel or stainless steel for the job.</dd></div>
+      <div><dt>Style &amp; detail</dt><dd>Simple lines, decorative patterns or a custom reference.</dd></div>
+    </dl>
+    <a class="btn" href="#contact">Tell us what you have in mind <svg><use href="#arrow"/></svg></a>
+  </div>
+</div></section>
+
+<section class="alt why-sec"><div class="wrap">
+  <span class="mono eyebrow">05 / Why custom fabrication</span>
+  <h2 class="solo">Better considered. Better suited.</h2>
+  <div class="why">
+    <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 22L22 4l6 6L10 28zM9 17l3 3M13 13l3 3M17 9l3 3"/></svg><h3>A fit that makes sense</h3><p>Work around your actual space instead of adjusting your space to a standard product.</p></div>
+    <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 11V6a2 2 0 012-2h5M21 4h5a2 2 0 012 2v5M28 21v5a2 2 0 01-2 2h-5M11 28H6a2 2 0 01-2-2v-5M10 16h12"/></svg><h3>The look you want</h3><p>Coordinate proportions, patterns and finishes with your home or business.</p></div>
+    <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="9" r="3"/><path d="M12 9h16M4 9h2"/><circle cx="23" cy="22" r="3"/><path d="M4 22h16M26 22h2"/></svg><h3>Purpose before pattern</h3><p>Consider access, privacy, coverage and daily use as part of the design.</p></div>
+    <div><svg><use href="#pin"/></svg><h3>A local conversation</h3><p>Speak directly with MARUTI FEBRICATION in Jamnagar about your requirements.</p></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="head">
+    <div><span class="mono eyebrow">06 / How to get started</span><h2>A clear path from idea to metal.</h2></div>
+    <p class="side">No technical drawing? No problem. Start with your requirement, and discuss the details from there.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="n mono"><span>01</span><svg><use href="#arrow-r"/></svg></div><h3>Tell us the idea</h3><p>Call 9428280683 with the type of work, your location in Jamnagar and any references.</p></div>
+    <div class="step"><div class="n mono"><span>02</span><svg><use href="#arrow-r"/></svg></div><h3>Define the details</h3><p>Discuss dimensions, site requirements, material and finish for your project.</p></div>
+    <div class="step"><div class="n mono"><span>03</span><svg><use href="#arrow-r"/></svg></div><h3>Review the quote</h3><p>Confirm the design, scope, price and expected timeline before moving ahead.</p></div>
+    <div class="step"><div class="n mono"><span>04</span><svg><use href="#check"/></svg></div><h3>Plan the work</h3><p>Agree on fabrication and fitting requirements with the team for your space.</p></div>
+  </div>
+</div></section>
+
+<section class="alt" id="faq"><div class="wrap faq-grid">
+  <div style="min-width:0">
+    <span class="mono eyebrow">07 / Before we begin</span>
+    <h2>Good questions.<br>Straight answers.</h2>
+    <p class="intro">Every space is different. A conversation is the best way to work out the specifics.</p>
+    <div class="phone"><svg><use href="#phone"/></svg><span>9428280683</span></div>
+  </div>
+  <div class="acc" style="min-width:0">
+    <details open><summary>What kind of fabrication can I ask for?<span class="pm"></span></summary><p class="ans">Gates, grills, shades and sheds, domes, and custom interior metal products for residential and commercial spaces.</p></details>
+    <details><summary>Can I bring my own design or photo?<span class="pm"></span></summary><p class="ans">Yes. A reference photo or sketch helps us understand the look you want. We can discuss how it fits your space and what is practical to build.</p></details>
+    <details><summary>How is the price decided?<span class="pm"></span></summary><p class="ans">Price depends on the size, material, finish and design of the work. Share your requirement and we will confirm scope and price in a quote before work starts.</p></details>
+    <details><summary>How long will the work take?<span class="pm"></span></summary><p class="ans">Timelines depend on the type and size of the project. We confirm the expected timeline with you when you review the quote.</p></details>
+    <details><summary>Where can I discuss my project?<span class="pm"></span></summary><p class="ans">Call 9428280683 to talk through your project. We work with homes and businesses in Jamnagar.</p></details>
+  </div>
+</div></section>
+
+<section class="dark" id="contact"><div class="wrap contact">
+  <div style="min-width:0">
+    <span class="mono eyebrow">08 / Let’s make it happen</span>
+    <h2>Your space.<br>Your idea.<br>Let’s build on it.</h2>
+    <p class="lede">Planning a gate, grill, shed or a custom metal detail? Tell us what you need and start a conversation about your project.</p>
+    <div class="call mono">Call Maruti Febrication</div>
+    <a class="bignum" href="tel:9428280683">9428280683</a>
+    <div class="loc"><svg><use href="#pin"/></svg><span>Jamnagar, India · Residential &amp; commercial</span></div>
+    <p class="ready">Helpful to have ready: a reference photo, approximate dimensions and your preferred material or finish.</p>
+  </div>
+  <form class="form" id="quote" novalidate>
+    <h3>Tell us about your project</h3>
+    <p class="sub">Design preview — form and buttons are not connected.</p>
+    <div class="two">
+      <div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="Enter your name" autocomplete="name"></div>
+      <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="Enter your phone number" autocomplete="tel"></div>
+    </div>
+    <div class="field"><label for="svc">What do you need?</label>
+      <select id="svc" name="service"><option value="">Choose a service</option><option>Gates</option><option>Grills</option><option>Shades &amp; sheds</option><option>Domes</option><option>Custom interiors</option><option>Something else</option></select></div>
+    <div class="field"><label for="details">Project details</label><textarea id="details" name="details" placeholder="Your idea, approximate size and area in Jamnagar…"></textarea></div>
+    <button class="btn" type="submit">Request a quote <svg><use href="#arrow"/></svg></button>
+    <p class="msg" id="msg" role="status"></p>
+    <p class="foot">For a direct inquiry, call 9428280683.</p>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="fbrand">Maruti Febrication</div><p class="about">Custom metal, steel and stainless-steel fabrication for the homes and businesses of Jamnagar.</p></div>
+    <div><h4 class="mono">What we make</h4><ul><li><a href="#services">Gates &amp; grills</a></li><li><a href="#services">Shades &amp; sheds</a></li><li><a href="#services">Domes</a></li><li><a href="#services">Custom interiors</a></li></ul></div>
+    <div><h4 class="mono">Explore</h4><ul><li><a href="#inspiration">Design inspiration</a></li><li><a href="#process">Custom work</a></li><li><a href="#process">Our process</a></li><li><a href="#faq">FAQs</a></li></ul></div>
+    <div><h4 class="mono">Start a conversation</h4><div class="fnum">9428280683</div><p class="city">Jamnagar, India</p><a class="rq" href="#contact">Request a quote <svg><use href="#arrow"/></svg></a></div>
+  </div>
+  <div class="fbar"><span class="mono">Maruti Febrication / Jamnagar</span><span class="mid">Images are illustrative design inspiration, not completed projects.</span><a href="#top">Back to top <svg><use href="#arrow-u"/></svg></a></div>
+</div></footer>
+
+<script>
+(function(){
+  var btns=document.querySelectorAll('.filters button'),cards=document.querySelectorAll('#insp .pc');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    var f=b.dataset.f;
+    cards.forEach(function(c){c.hidden=!(f==='all'||c.dataset.c===f)});
+    var shown=[].filter.call(cards,function(c){return !c.hidden});
+    document.getElementById('insp').style.gridTemplateColumns=window.innerWidth>900&&shown.length<3?'repeat('+shown.length+',minmax(0,1fr))':'';
+  })});
+  var sel=document.getElementById('svc');
+  sel.addEventListener('change',function(){sel.classList.toggle('picked',!!sel.value)});
+  document.getElementById('quote').addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('msg').textContent='This is a design preview. The form is not connected, so please call 9428280683.';
+  });
+})();
+</script>
+</body>
+</html>

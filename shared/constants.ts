@@ -1,0 +1,10 @@
+export const PHONE_DISPLAY = "9428280683";
+export const SERVICES = ["Gates", "Grills", "Shades & sheds", "Domes", "Custom interiors", "Something else"] as const;
+export const LOCALES = ["en", "gu", "hi"] as const;
+export const STATUSES = ["new", "contacted", "quoted", "won", "lost"] as const;
+export const EVENT_NAMES = ["call_click", "whatsapp_click", "quote_submit"] as const;
+export const MAX_BODY_BYTES = 4096;
+export const CONSENT_VERSION = "2026-10-v1";
+export const WINDOW_MS = 10 * 60_000;
+export const LIMITS = { ip: 5, phone: 3, ipStrict: 2, phoneStrict: 1, event: 60 } as const;
+export const MAX_NOTIFY_ATTEMPTS = 10;

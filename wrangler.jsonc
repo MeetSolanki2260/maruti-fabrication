@@ -1,0 +1,16 @@
+{
+  "name": "maruti-fabrication",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./out", "binding": "ASSETS", "not_found_handling": "404-page", "run_worker_first": ["/api/*"] },
+  "d1_databases": [{ "binding": "DB", "database_name": "maruti-prod", "database_id": "REPLACE_WITH_REAL_ID", "migrations_dir": "drizzle" }],
+  "triggers": { "crons": ["*/15 * * * *", "0 21 * * *"] },   // 21:00 UTC = 02:30 India time
+  "observability": { "enabled": true },
+  "vars": {
+    "ALLOWED_ORIGINS": "https://maruti-fabrication.workers.dev",
+    "SITE_URL": "https://maruti-fabrication.workers.dev",
+    "ADMIN_EMAILS": "",
+    "ACCESS_TEAM_DOMAIN": "",
+    "ACCESS_AUD": ""
+  }
+}

@@ -1,0 +1,1010 @@
+{
+  "custom-craft": {
+    "width": 718,
+    "height": 643,
+    "avif": [
+      {
+        "w": 480,
+        "file": "custom-craft-480-5547b430.avif"
+      },
+      {
+        "w": 718,
+        "file": "custom-craft-718-23a32896.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "custom-craft-480-cefe6319.webp"
+      },
+      {
+        "w": 718,
+        "file": "custom-craft-718-b8dc3aea.webp"
+      }
+    ]
+  },
+  "dome-01": {
+    "width": 1200,
+    "height": 800,
+    "avif": [
+      {
+        "w": 480,
+        "file": "dome-01-480-1730da07.avif"
+      },
+      {
+        "w": 768,
+        "file": "dome-01-768-f8253e57.avif"
+      },
+      {
+        "w": 1200,
+        "file": "dome-01-1200-f7141ea9.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "dome-01-480-07995d3c.webp"
+      },
+      {
+        "w": 768,
+        "file": "dome-01-768-20be60fb.webp"
+      },
+      {
+        "w": 1200,
+        "file": "dome-01-1200-318439b2.webp"
+      }
+    ]
+  },
+  "dome-02": {
+    "width": 1200,
+    "height": 1800,
+    "avif": [
+      {
+        "w": 480,
+        "file": "dome-02-480-d3eaf6d8.avif"
+      },
+      {
+        "w": 768,
+        "file": "dome-02-768-de52fc64.avif"
+      },
+      {
+        "w": 1200,
+        "file": "dome-02-1200-fc6e1714.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "dome-02-480-3c67a788.webp"
+      },
+      {
+        "w": 768,
+        "file": "dome-02-768-984653a7.webp"
+      },
+      {
+        "w": 1200,
+        "file": "dome-02-1200-e0c1f57e.webp"
+      }
+    ]
+  },
+  "dome-03": {
+    "width": 800,
+    "height": 1200,
+    "avif": [
+      {
+        "w": 480,
+        "file": "dome-03-480-8a74ca2e.avif"
+      },
+      {
+        "w": 768,
+        "file": "dome-03-768-1d74d633.avif"
+      },
+      {
+        "w": 800,
+        "file": "dome-03-800-cc57755f.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "dome-03-480-a440128c.webp"
+      },
+      {
+        "w": 768,
+        "file": "dome-03-768-ce40e49d.webp"
+      },
+      {
+        "w": 800,
+        "file": "dome-03-800-62dcf201.webp"
+      }
+    ]
+  },
+  "dome-04": {
+    "width": 1200,
+    "height": 1200,
+    "avif": [
+      {
+        "w": 480,
+        "file": "dome-04-480-aa52999f.avif"
+      },
+      {
+        "w": 768,
+        "file": "dome-04-768-e20d7d4b.avif"
+      },
+      {
+        "w": 1200,
+        "file": "dome-04-1200-2adc3b8b.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "dome-04-480-b76bd981.webp"
+      },
+      {
+        "w": 768,
+        "file": "dome-04-768-b4d6caf5.webp"
+      },
+      {
+        "w": 1200,
+        "file": "dome-04-1200-7ecf4234.webp"
+      }
+    ]
+  },
+  "dome-05": {
+    "width": 800,
+    "height": 530,
+    "avif": [
+      {
+        "w": 480,
+        "file": "dome-05-480-060dd3ef.avif"
+      },
+      {
+        "w": 768,
+        "file": "dome-05-768-4093fed9.avif"
+      },
+      {
+        "w": 800,
+        "file": "dome-05-800-2ec6e00a.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "dome-05-480-a990fd8f.webp"
+      },
+      {
+        "w": 768,
+        "file": "dome-05-768-59336ad4.webp"
+      },
+      {
+        "w": 800,
+        "file": "dome-05-800-fd491c26.webp"
+      }
+    ]
+  },
+  "gate-01": {
+    "width": 1200,
+    "height": 800,
+    "avif": [
+      {
+        "w": 480,
+        "file": "gate-01-480-046f40a4.avif"
+      },
+      {
+        "w": 768,
+        "file": "gate-01-768-23087c26.avif"
+      },
+      {
+        "w": 1200,
+        "file": "gate-01-1200-24991330.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "gate-01-480-7b779db3.webp"
+      },
+      {
+        "w": 768,
+        "file": "gate-01-768-fc6dd8d2.webp"
+      },
+      {
+        "w": 1200,
+        "file": "gate-01-1200-ad7123df.webp"
+      }
+    ]
+  },
+  "gate-02": {
+    "width": 1200,
+    "height": 1800,
+    "avif": [
+      {
+        "w": 480,
+        "file": "gate-02-480-8d095b68.avif"
+      },
+      {
+        "w": 768,
+        "file": "gate-02-768-17889876.avif"
+      },
+      {
+        "w": 1200,
+        "file": "gate-02-1200-72c0637e.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "gate-02-480-7618a290.webp"
+      },
+      {
+        "w": 768,
+        "file": "gate-02-768-1cfa93af.webp"
+      },
+      {
+        "w": 1200,
+        "file": "gate-02-1200-309615c2.webp"
+      }
+    ]
+  },
+  "gate-03": {
+    "width": 1200,
+    "height": 800,
+    "avif": [
+      {
+        "w": 480,
+        "file": "gate-03-480-9700a60f.avif"
+      },
+      {
+        "w": 768,
+        "file": "gate-03-768-114d961c.avif"
+      },
+      {
+        "w": 1200,
+        "file": "gate-03-1200-b6cc3bee.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "gate-03-480-46e866f2.webp"
+      },
+      {
+        "w": 768,
+        "file": "gate-03-768-b6a57462.webp"
+      },
+      {
+        "w": 1200,
+        "file": "gate-03-1200-cc7e7499.webp"
+      }
+    ]
+  },
+  "gate-04": {
+    "width": 1200,
+    "height": 1006,
+    "avif": [
+      {
+        "w": 480,
+        "file": "gate-04-480-ce7fb120.avif"
+      },
+      {
+        "w": 768,
+        "file": "gate-04-768-8111fae7.avif"
+      },
+      {
+        "w": 1200,
+        "file": "gate-04-1200-9db4e06e.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "gate-04-480-ac9a489e.webp"
+      },
+      {
+        "w": 768,
+        "file": "gate-04-768-6f1fb1ff.webp"
+      },
+      {
+        "w": 1200,
+        "file": "gate-04-1200-a81b762d.webp"
+      }
+    ]
+  },
+  "gate-05": {
+    "width": 1200,
+    "height": 1200,
+    "avif": [
+      {
+        "w": 480,
+        "file": "gate-05-480-cda43957.avif"
+      },
+      {
+        "w": 768,
+        "file": "gate-05-768-33f5991f.avif"
+      },
+      {
+        "w": 1200,
+        "file": "gate-05-1200-4f9d7e0e.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "gate-05-480-fa2cc276.webp"
+      },
+      {
+        "w": 768,
+        "file": "gate-05-768-6708a7ef.webp"
+      },
+      {
+        "w": 1200,
+        "file": "gate-05-1200-fefeab23.webp"
+      }
+    ]
+  },
+  "grill-01": {
+    "width": 1200,
+    "height": 1802,
+    "avif": [
+      {
+        "w": 480,
+        "file": "grill-01-480-957ccee9.avif"
+      },
+      {
+        "w": 768,
+        "file": "grill-01-768-f0f76a60.avif"
+      },
+      {
+        "w": 1200,
+        "file": "grill-01-1200-b269cb54.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "grill-01-480-926f482c.webp"
+      },
+      {
+        "w": 768,
+        "file": "grill-01-768-c74dc84f.webp"
+      },
+      {
+        "w": 1200,
+        "file": "grill-01-1200-d5bc6d7f.webp"
+      }
+    ]
+  },
+  "grill-02": {
+    "width": 1200,
+    "height": 797,
+    "avif": [
+      {
+        "w": 480,
+        "file": "grill-02-480-b4048425.avif"
+      },
+      {
+        "w": 768,
+        "file": "grill-02-768-f7797974.avif"
+      },
+      {
+        "w": 1200,
+        "file": "grill-02-1200-039cf5b4.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "grill-02-480-7e69e5fb.webp"
+      },
+      {
+        "w": 768,
+        "file": "grill-02-768-05278505.webp"
+      },
+      {
+        "w": 1200,
+        "file": "grill-02-1200-460a8982.webp"
+      }
+    ]
+  },
+  "grill-03": {
+    "width": 1200,
+    "height": 801,
+    "avif": [
+      {
+        "w": 480,
+        "file": "grill-03-480-3d9d66b1.avif"
+      },
+      {
+        "w": 768,
+        "file": "grill-03-768-de0cf337.avif"
+      },
+      {
+        "w": 1200,
+        "file": "grill-03-1200-16b1c87f.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "grill-03-480-a993c3a5.webp"
+      },
+      {
+        "w": 768,
+        "file": "grill-03-768-313a4800.webp"
+      },
+      {
+        "w": 1200,
+        "file": "grill-03-1200-b67183b4.webp"
+      }
+    ]
+  },
+  "grill-04": {
+    "width": 1200,
+    "height": 800,
+    "avif": [
+      {
+        "w": 480,
+        "file": "grill-04-480-01366084.avif"
+      },
+      {
+        "w": 768,
+        "file": "grill-04-768-f6acdd20.avif"
+      },
+      {
+        "w": 1200,
+        "file": "grill-04-1200-eecc3bbf.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "grill-04-480-2032ce0c.webp"
+      },
+      {
+        "w": 768,
+        "file": "grill-04-768-18330bac.webp"
+      },
+      {
+        "w": 1200,
+        "file": "grill-04-1200-56e5431e.webp"
+      }
+    ]
+  },
+  "grill-05": {
+    "width": 1200,
+    "height": 1059,
+    "avif": [
+      {
+        "w": 480,
+        "file": "grill-05-480-34508ab1.avif"
+      },
+      {
+        "w": 768,
+        "file": "grill-05-768-dfa705fb.avif"
+      },
+      {
+        "w": 1200,
+        "file": "grill-05-1200-de436796.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "grill-05-480-2cfa1c76.webp"
+      },
+      {
+        "w": 768,
+        "file": "grill-05-768-5a07ed33.webp"
+      },
+      {
+        "w": 1200,
+        "file": "grill-05-1200-0b3c38ca.webp"
+      }
+    ]
+  },
+  "hero-gate": {
+    "width": 896,
+    "height": 600,
+    "avif": [
+      {
+        "w": 480,
+        "file": "hero-gate-480-5d67049b.avif"
+      },
+      {
+        "w": 768,
+        "file": "hero-gate-768-ffcfe807.avif"
+      },
+      {
+        "w": 896,
+        "file": "hero-gate-896-493f1182.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "hero-gate-480-a20228b3.webp"
+      },
+      {
+        "w": 768,
+        "file": "hero-gate-768-e9c7debf.webp"
+      },
+      {
+        "w": 896,
+        "file": "hero-gate-896-eb1245ea.webp"
+      }
+    ]
+  },
+  "insp-dome": {
+    "width": 438,
+    "height": 463,
+    "avif": [
+      {
+        "w": 438,
+        "file": "insp-dome-438-7ba224f2.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 438,
+        "file": "insp-dome-438-7a3abfcb.webp"
+      }
+    ]
+  },
+  "insp-gate": {
+    "width": 698,
+    "height": 463,
+    "avif": [
+      {
+        "w": 480,
+        "file": "insp-gate-480-7cbc40b7.avif"
+      },
+      {
+        "w": 698,
+        "file": "insp-gate-698-0621cb6f.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "insp-gate-480-d7aa568a.webp"
+      },
+      {
+        "w": 698,
+        "file": "insp-gate-698-2af79372.webp"
+      }
+    ]
+  },
+  "insp-interior": {
+    "width": 438,
+    "height": 463,
+    "avif": [
+      {
+        "w": 438,
+        "file": "insp-interior-438-90ad7dcf.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 438,
+        "file": "insp-interior-438-de362e07.webp"
+      }
+    ]
+  },
+  "interior-01": {
+    "width": 1200,
+    "height": 1059,
+    "avif": [
+      {
+        "w": 480,
+        "file": "interior-01-480-34508ab1.avif"
+      },
+      {
+        "w": 768,
+        "file": "interior-01-768-dfa705fb.avif"
+      },
+      {
+        "w": 1200,
+        "file": "interior-01-1200-de436796.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "interior-01-480-2cfa1c76.webp"
+      },
+      {
+        "w": 768,
+        "file": "interior-01-768-5a07ed33.webp"
+      },
+      {
+        "w": 1200,
+        "file": "interior-01-1200-0b3c38ca.webp"
+      }
+    ]
+  },
+  "interior-02": {
+    "width": 1200,
+    "height": 800,
+    "avif": [
+      {
+        "w": 480,
+        "file": "interior-02-480-21c55549.avif"
+      },
+      {
+        "w": 768,
+        "file": "interior-02-768-65da7dfc.avif"
+      },
+      {
+        "w": 1200,
+        "file": "interior-02-1200-dd8d2df3.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "interior-02-480-d4f4d7f2.webp"
+      },
+      {
+        "w": 768,
+        "file": "interior-02-768-769013c7.webp"
+      },
+      {
+        "w": 1200,
+        "file": "interior-02-1200-f260ac67.webp"
+      }
+    ]
+  },
+  "interior-03": {
+    "width": 1200,
+    "height": 801,
+    "avif": [
+      {
+        "w": 480,
+        "file": "interior-03-480-3d9d66b1.avif"
+      },
+      {
+        "w": 768,
+        "file": "interior-03-768-de0cf337.avif"
+      },
+      {
+        "w": 1200,
+        "file": "interior-03-1200-16b1c87f.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "interior-03-480-a993c3a5.webp"
+      },
+      {
+        "w": 768,
+        "file": "interior-03-768-313a4800.webp"
+      },
+      {
+        "w": 1200,
+        "file": "interior-03-1200-b67183b4.webp"
+      }
+    ]
+  },
+  "interior-04": {
+    "width": 1200,
+    "height": 797,
+    "avif": [
+      {
+        "w": 480,
+        "file": "interior-04-480-b4048425.avif"
+      },
+      {
+        "w": 768,
+        "file": "interior-04-768-f7797974.avif"
+      },
+      {
+        "w": 1200,
+        "file": "interior-04-1200-039cf5b4.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "interior-04-480-7e69e5fb.webp"
+      },
+      {
+        "w": 768,
+        "file": "interior-04-768-05278505.webp"
+      },
+      {
+        "w": 1200,
+        "file": "interior-04-1200-460a8982.webp"
+      }
+    ]
+  },
+  "interior-05": {
+    "width": 1200,
+    "height": 800,
+    "avif": [
+      {
+        "w": 480,
+        "file": "interior-05-480-01366084.avif"
+      },
+      {
+        "w": 768,
+        "file": "interior-05-768-f6acdd20.avif"
+      },
+      {
+        "w": 1200,
+        "file": "interior-05-1200-eecc3bbf.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "interior-05-480-2032ce0c.webp"
+      },
+      {
+        "w": 768,
+        "file": "interior-05-768-18330bac.webp"
+      },
+      {
+        "w": 1200,
+        "file": "interior-05-1200-56e5431e.webp"
+      }
+    ]
+  },
+  "interior-06": {
+    "width": 800,
+    "height": 1201,
+    "avif": [
+      {
+        "w": 480,
+        "file": "interior-06-480-d7c53424.avif"
+      },
+      {
+        "w": 768,
+        "file": "interior-06-768-e14c6f59.avif"
+      },
+      {
+        "w": 800,
+        "file": "interior-06-800-dc689199.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "interior-06-480-e3073f8a.webp"
+      },
+      {
+        "w": 768,
+        "file": "interior-06-768-148ededf.webp"
+      },
+      {
+        "w": 800,
+        "file": "interior-06-800-5c78043f.webp"
+      }
+    ]
+  },
+  "shade-01": {
+    "width": 1200,
+    "height": 795,
+    "avif": [
+      {
+        "w": 480,
+        "file": "shade-01-480-769a2127.avif"
+      },
+      {
+        "w": 768,
+        "file": "shade-01-768-d9573626.avif"
+      },
+      {
+        "w": 1200,
+        "file": "shade-01-1200-a10a4aa8.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "shade-01-480-89b689ad.webp"
+      },
+      {
+        "w": 768,
+        "file": "shade-01-768-67e91797.webp"
+      },
+      {
+        "w": 1200,
+        "file": "shade-01-1200-1577a6ab.webp"
+      }
+    ]
+  },
+  "shade-02": {
+    "width": 1200,
+    "height": 800,
+    "avif": [
+      {
+        "w": 480,
+        "file": "shade-02-480-bafec6c5.avif"
+      },
+      {
+        "w": 768,
+        "file": "shade-02-768-1d54bb9e.avif"
+      },
+      {
+        "w": 1200,
+        "file": "shade-02-1200-b83bf858.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "shade-02-480-ed9c3c2d.webp"
+      },
+      {
+        "w": 768,
+        "file": "shade-02-768-f56e21cb.webp"
+      },
+      {
+        "w": 1200,
+        "file": "shade-02-1200-7f13c19c.webp"
+      }
+    ]
+  },
+  "shade-03": {
+    "width": 1200,
+    "height": 800,
+    "avif": [
+      {
+        "w": 480,
+        "file": "shade-03-480-4552c665.avif"
+      },
+      {
+        "w": 768,
+        "file": "shade-03-768-5d8a53a0.avif"
+      },
+      {
+        "w": 1200,
+        "file": "shade-03-1200-94af24f3.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "shade-03-480-b6b418ec.webp"
+      },
+      {
+        "w": 768,
+        "file": "shade-03-768-39b3d4ff.webp"
+      },
+      {
+        "w": 1200,
+        "file": "shade-03-1200-d9c90ce7.webp"
+      }
+    ]
+  },
+  "shade-04": {
+    "width": 1200,
+    "height": 800,
+    "avif": [
+      {
+        "w": 480,
+        "file": "shade-04-480-21c55549.avif"
+      },
+      {
+        "w": 768,
+        "file": "shade-04-768-65da7dfc.avif"
+      },
+      {
+        "w": 1200,
+        "file": "shade-04-1200-dd8d2df3.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "shade-04-480-d4f4d7f2.webp"
+      },
+      {
+        "w": 768,
+        "file": "shade-04-768-769013c7.webp"
+      },
+      {
+        "w": 1200,
+        "file": "shade-04-1200-f260ac67.webp"
+      }
+    ]
+  },
+  "shade-05": {
+    "width": 800,
+    "height": 533,
+    "avif": [
+      {
+        "w": 480,
+        "file": "shade-05-480-c5bbe3ff.avif"
+      },
+      {
+        "w": 768,
+        "file": "shade-05-768-c8b07e52.avif"
+      },
+      {
+        "w": 800,
+        "file": "shade-05-800-087f32e4.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "shade-05-480-9e3b191f.webp"
+      },
+      {
+        "w": 768,
+        "file": "shade-05-768-18879499.webp"
+      },
+      {
+        "w": 800,
+        "file": "shade-05-800-e615f79b.webp"
+      }
+    ]
+  },
+  "where-business": {
+    "width": 803,
+    "height": 372,
+    "avif": [
+      {
+        "w": 480,
+        "file": "where-business-480-002b7132.avif"
+      },
+      {
+        "w": 768,
+        "file": "where-business-768-2302368a.avif"
+      },
+      {
+        "w": 803,
+        "file": "where-business-803-25d3a19e.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "where-business-480-12de8d31.webp"
+      },
+      {
+        "w": 768,
+        "file": "where-business-768-4a92440d.webp"
+      },
+      {
+        "w": 803,
+        "file": "where-business-803-05df3b3d.webp"
+      }
+    ]
+  },
+  "where-home": {
+    "width": 803,
+    "height": 372,
+    "avif": [
+      {
+        "w": 480,
+        "file": "where-home-480-cc04c01e.avif"
+      },
+      {
+        "w": 768,
+        "file": "where-home-768-28a90224.avif"
+      },
+      {
+        "w": 803,
+        "file": "where-home-803-b916f4c7.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 480,
+        "file": "where-home-480-922a4c10.webp"
+      },
+      {
+        "w": 768,
+        "file": "where-home-768-3a8b430b.webp"
+      },
+      {
+        "w": 803,
+        "file": "where-home-803-b7d10435.webp"
+      }
+    ]
+  }
+}
